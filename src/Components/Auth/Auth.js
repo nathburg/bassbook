@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
 import { authUser, getUser } from '../../services/auth';
 import './Auth.css';
 
@@ -7,7 +7,12 @@ export default function Auth() {
   const { type } = useParams();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const user = getUser();
 
+  if (user) {
+    return <Redirect to='/' />;
+  }
+  
   return (
     <div>
       <div className="auth-form">
@@ -19,8 +24,6 @@ export default function Auth() {
         </label>
         <button onClick={async () => {
           const resp = await authUser(email, password, type);
-          console.log(email, password, type);
-          console.log(resp);
         }}>Enter</button>
       </div>  
     </div>
