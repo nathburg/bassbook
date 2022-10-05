@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Main />
+      
       <Switch>
         <Route path='/post/edit/:id' component={EditPost} />
         <Route path="/auth/:type" component={Auth} />
