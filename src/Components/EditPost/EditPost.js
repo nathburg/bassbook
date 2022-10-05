@@ -10,7 +10,7 @@ export default function EditPost() {
   const handleSubmit = async () => {
     try {
       await updatePost(id, postDetail.title, postDetail.description);
-      history.push('/post');
+      history.push('/posts');
     } catch (error) {
       setError(error);
     }
