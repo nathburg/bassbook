@@ -61,7 +61,7 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
-.link-container {
+.sign-out-container {
   display: flex;
   flex-direction: column;
 }
