@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getPostDetail } from '../../services/posts';
+import { getPostDetail } from '../services/posts';
 
 export function usePost(id) {
   const [postDetail, setPostDetail] = useState({});

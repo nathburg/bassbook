@@ -1,4 +1,4 @@
-import { checkError, client } from './Client';
+import { checkError, client } from './client';
 
 
 
