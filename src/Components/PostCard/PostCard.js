@@ -7,7 +7,7 @@ import { deletePost } from '../../services/posts';
 import './PostCard.css';
 
 export default function PostCard({ title, description, user_id, id }) {
-  const { user } = useContext(UserContext);
+  const { user, submit, setSubmit } = useContext(UserContext);
   const owner = user.id === user_id;
   return (
     <div className="post">
@@ -17,12 +17,11 @@ export default function PostCard({ title, description, user_id, id }) {
         <p>
           <Link to={`/posts/edit/${id}`}>Edit </Link>
           <button onClick={async () => {
-            const resp = await deletePost(id);
-            
-            
+            await deletePost(id);
+            setSubmit(!submit);
             // if resp isn't an error, have a submit state that was passed in from Main that rerenders Main
           }}>
-
+          Delete
           </button>
         </p>
       )}
