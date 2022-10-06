@@ -2,8 +2,12 @@ import { checkError, client } from './client';
 
 
 
+export async function getPosts() {
+  const resp = await client.from('posts').select('*');
 
+  return checkError(resp);
 
+}
 
 
 
@@ -17,5 +21,7 @@ export async function getPostDetail(id) {
 
 export async function updatePost(id, title, description) {
   const resp = await client.from('posts').update({ id, title, description }).match({ id });
-  return checkError(resp);
-}
+  
+  }
+
+
