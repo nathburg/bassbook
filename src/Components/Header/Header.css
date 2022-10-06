@@ -1,23 +1,64 @@
+.header-music {
+  background-image: url(../../../public/interview-sound-bites.png);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
 .sign-out {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-content: flex-end;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 30px;
-  color: lightgreen;
-  width: 100px;
-  
-  
-  
-
+  color: black;
+  width: 85px;
+  height: 40px;
+  background-color: lightgreen;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 .sign-out-container {
   display: flex;
-  align-content: flex-end;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+h1 {
+  color: black;
+  font-size: 7rem;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+}
+
+.hello {
+  color: black;
+  font-size: 1.75rem;
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .link-container {
@@ -25,8 +66,26 @@
   flex-direction: column;
 }
 
-div {
-  margin: 10px;
-  font-size: 1.2rem;
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  align-content: center;
+  margin-bottom: 5%;
 }
 
+
+.create-post {
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  border: 2px solid black;
+  margin-top: 10px;
+  font-size: 1.35rem;
+  padding: 10px;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
