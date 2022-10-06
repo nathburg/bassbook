@@ -1,0 +1,8 @@
+.sign-out {
+  cursor: pointer;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+}

@@ -9,8 +9,11 @@ export default function Auth() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { user, setUser } = useContext(UserContext);
-  const currentUser = getUser();
-  setUser(currentUser);
+  function getNewUser() {
+    const currentUser = getUser();
+    setUser(currentUser);
+  }
+  getNewUser();
   
   if (user) {
     return <Redirect to='/' />;
@@ -27,6 +30,7 @@ export default function Auth() {
         </label>
         <button onClick={async () => {
           await authUser(email, password, type);
+          getNewUser();
         }}>Enter</button>
       </div>  
     </div>
