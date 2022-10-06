@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../context/UserContext';
 import { getPosts } from '../services/posts';
 
 export function usePosts() {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
+  const { submit } = useContext(UserContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +21,7 @@ export function usePosts() {
       }
     };
     fetchData();
-  }, []);
+  }, [submit]);
 
   return { posts, error, loading };
 }
