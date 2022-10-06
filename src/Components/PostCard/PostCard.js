@@ -1,10 +1,11 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { useUser } from '../../context/UserContext';
+import { UserContext, useUser } from '../../context/UserContext';
 
 import './PostCard.css';
 
 export default function PostCard({ title, description, user_id, id }) {
-  const { user } = useUser();
+  const { user } = useContext(UserContext);
   const owner = user.id === user_id;
   return (
     <div className="post">
