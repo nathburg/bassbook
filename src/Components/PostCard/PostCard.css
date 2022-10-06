@@ -1,14 +1,29 @@
 .post {
     border: 2px solid black;
-    width: 16em;
-    height: 16em;
+    width: 10em;
+    height: 10em;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: linear-gradient(225deg, #ffffff, #f9fafa, #f3f6f5, #edf1f0, #e7edeb, #e1e8e7, #dbe4e2, #d5dfdd);
 }
 
 h3 {
-    font-size: 1em;
+    font-size: .8em;
 }
 
 p {
-    font-size: 0.7em;
+    font-size: 0.6em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    margin: 10px;
+    cursor: pointer;
+    font-size: 0.3em;
 }
