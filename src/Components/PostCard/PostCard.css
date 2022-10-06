@@ -1,0 +1,14 @@
+.post {
+    border: 2px solid black;
+    width: 16em;
+    height: 16em;
+    margin: 20px;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+p {
+    font-size: 0.7em;
+}
