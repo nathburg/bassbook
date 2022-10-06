@@ -1,8 +1,32 @@
 .sign-out {
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  margin: 30px;
+  color: lightgreen;
+  width: 100px;
+  
+  
+  
+
+}
+
+.sign-out-container {
+  display: flex;
+  align-content: flex-end;
+  flex-direction: row-reverse;
 }
 
 .link-container {
   display: flex;
   flex-direction: column;
 }
+
+div {
+  margin: 10px;
+  font-size: 1.2rem;
+}
+

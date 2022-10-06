@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
+import { checkError } from '../../services/client';
 import { deletePost } from '../../services/posts';
 
 import './PostCard.css';
@@ -14,7 +15,7 @@ export default function PostCard({ title, description, user_id, id }) {
       <p>{description}</p>
       {owner && (
         <p>
-          <Link to={`/posts/edit/${id}`}>Edit </Link>
+          <Link to={`/post/edit/${id}`}>Edit </Link>
           <button onClick={async () => {
             await deletePost(id);
             setSubmit(!submit);
@@ -27,3 +28,6 @@ export default function PostCard({ title, description, user_id, id }) {
     </div>
   );
 }
+
+
+// comment
