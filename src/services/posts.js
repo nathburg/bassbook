@@ -21,7 +21,7 @@ export async function getPostDetail(id) {
 
 export async function updatePost(id, title, description) {
   const resp = await client.from('posts').update({ id, title, description }).match({ id });
-  
+  return checkError(resp);
 }
 
 
