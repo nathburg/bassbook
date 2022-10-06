@@ -10,10 +10,12 @@ export default function Header() {
   
   return (
     <div>
-      <div className='sign-out' onClick={() => {
-        signOut();
-        setUser(null);
-      }}>Sign Out</div>
+      <div className='sign-out-container'>
+        <div className='sign-out' onClick={() => {
+          signOut();
+          setUser(null);
+        }}>Sign Out</div>
+      </div>
       <h1>Welcome to Bassbook</h1>
       {user && 
       <div>

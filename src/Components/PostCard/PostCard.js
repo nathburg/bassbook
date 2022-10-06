@@ -15,7 +15,7 @@ export default function PostCard({ title, description, user_id, id }) {
       <p>{description}</p>
       {owner && (
         <p>
-          <Link to={`/posts/edit/${id}`}>Edit </Link>
+          <Link to={`/post/edit/${id}`}>Edit </Link>
           <button onClick={async () => {
             await deletePost(id);
             setSubmit(!submit);
