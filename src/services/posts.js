@@ -17,7 +17,13 @@ export async function updatePost(id, title, description) {
   return checkError(resp);
 }
 
+export async function deletePost(id) {
+  const resp = await client.from('posts').delete().match({ id });
+  return checkError(resp);
+}
+
 export async function createPost(title, description) {
   const resp = await client.from('posts').insert({ title, description });
   return checkError(resp);
 }
+
