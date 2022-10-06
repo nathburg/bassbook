@@ -6,3 +6,11 @@
   display: flex;
   flex-direction: column;
 }
+
+.bg-fish {
+  background-color: chartreuse;
+}
+
+.bg-music {
+  background-color: plum 
+}

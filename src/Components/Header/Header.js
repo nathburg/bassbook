@@ -6,10 +6,10 @@ import './Header.css';
 
 
 export default function Header() {
-  const { user, setUser } = useContext(UserContext);
+  const { user, setUser, isFish, setIsFish } = useContext(UserContext);
   
   return (
-    <div>
+    <div className={`${isFish ? 'bg-fish' : 'bg-music'}`}>
       <h1>Welcome to Bassbook</h1>
       {user && 
       <div>
@@ -20,6 +20,7 @@ export default function Header() {
           setUser(null);
         }}>Sign Out</div>
       </div>}
+      <button onClick={() => setIsFish(!isFish)}>Change Theme</button>
       {!user &&
       <div className='link-container'>  
         <NavLink to='/auth/sign-in'>Sign In</NavLink>

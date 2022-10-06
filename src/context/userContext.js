@@ -8,9 +8,11 @@ const UserProvider = ({ children }) => {
   const currentUser = getUser();
   const [user, setUser] = useState(currentUser);
   const [submit, setSubmit] = useState(true);
+  const [isFish, setIsFish] = useState(true);
+
 
   
-  return <UserContext.Provider value={{ user, setUser, submit, setSubmit }}>
+  return <UserContext.Provider value={{ user, setUser, submit, setSubmit, isFish, setIsFish }}>
     {children}
   </UserContext.Provider>;
 };

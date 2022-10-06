@@ -38,6 +38,11 @@ export default function EditPost() {
         value={postDetail.description}
         onChange={(e) => setPostDetail({ ...postDetail, description: e.target.value })}
       />
+      <label>Topic</label>
+      <select>
+        <option>Fish</option>
+        <option>Music</option>
+      </select>
       <button onClick={handleSubmit}>Submit</button>
     </div>
   );
