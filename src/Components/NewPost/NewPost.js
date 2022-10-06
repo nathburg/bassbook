@@ -12,12 +12,13 @@ export default function NewPost(title, description) {
       await createPost(title, description);
       history.push('/');
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.error(e.message);
     }
   };
 
   return (
-    <div>
+    <div className='input-form'>
       <label>Title</label>
       <input type="text" onChange={(e) => setTitleInput(e.target.value)} />
       <label>Description</label>
