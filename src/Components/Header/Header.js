@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import { signOut } from '../../services/auth';
 import './Header.css';
@@ -14,6 +14,7 @@ export default function Header() {
       {user && 
       <div>
         <div>Hello {user.email}</div>
+        <Link to="/post/new">Create Post</Link>
         <div className='sign-out' onClick={() => {
           signOut();
           setUser(null);
