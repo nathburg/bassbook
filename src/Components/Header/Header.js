@@ -16,14 +16,16 @@ export default function Header() {
       <div className='head-container'>
         <p className='hello'>Hello {user.email}</p>
         <div className='sign-out-container'>
-          <div className='sign-out' onClick={() => {
+          <button className='sign-out' onClick={() => {
             signOut();
             setUser(null);
-          }}>Sign Out</div>
+          }}>Sign Out</button>
         </div>
         {user && 
       <div className='info-container'>
-        <Link className='create-post' to="/post/new">Create Post</Link>
+        <button>
+          <Link className='create-post' to="/post/new">Create Post</Link>
+        </button>
       </div>}
         {!user &&
       <div className='link-container'>  
