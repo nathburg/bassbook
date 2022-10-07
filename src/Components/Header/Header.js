@@ -7,7 +7,6 @@ import './Header.css';
 
 export default function Header() {
   const { user, setUser, isFish } = useContext(UserContext);
-  console.log(user);
   return (
     <div className={`header ${isFish ? 'fish-header' : 'music music-header'}`}>
       <div className="title-container">
