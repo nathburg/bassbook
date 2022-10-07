@@ -20,7 +20,7 @@ export default function Auth() {
   }
   
   return (
-    <div>
+    <div className='auth-form-container'>
       <div className={`auth-form ${isFish ? 'fish' : 'music'}`}>
         <label>Email</label>
         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -30,7 +30,10 @@ export default function Auth() {
           await authUser(email, password, type);
           getNewUser();
         }}>Enter</button>
-      </div>  
-    </div>
+      </div> 
+    </div> 
+  
   );
 }
+
+

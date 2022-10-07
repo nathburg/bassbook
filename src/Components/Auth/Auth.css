@@ -3,13 +3,27 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     
+
 }
 
 .auth-form {
-  margin: 24px;
-  display: grid;
+margin: 24px;
+display: flex;
+flex-direction: column;
+width: 400px;
+
 }
+
+.auth-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
+}
+
+
 
 .auth-form.fish button {
     color: black;
