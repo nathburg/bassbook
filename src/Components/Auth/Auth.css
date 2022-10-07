@@ -11,7 +11,7 @@
   display: grid;
 }
 
-.auth-form button {
+.auth-form.fish button {
     color: black;
     background-color: sandybrown;
     font-size: 1.35rem;
@@ -39,14 +39,7 @@ div.link-container {
     color: black;
 }
 
-html {
-    background: url(../../../public/fishing.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-
-label {
+.auth-form.fish label {
     color: black;
     font-size: 1.35rem;
     margin: 10px;
