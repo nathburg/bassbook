@@ -8,7 +8,7 @@ export default function Auth() {
   const { type } = useParams();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { user, setUser } = useContext(UserContext);
+  const { user, setUser, isFish } = useContext(UserContext);
   function getNewUser() {
     const currentUser = getUser();
     setUser(currentUser);
@@ -21,7 +21,7 @@ export default function Auth() {
   
   return (
     <div>
-      <div className="auth-form music">
+      <div className={`auth-form ${isFish ? 'fish' : 'music'}`}>
         <label>Email</label>
         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
         <label>Password</label>

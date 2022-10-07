@@ -19,7 +19,7 @@ export default function Header() {
         {/* <div className='info-container'> */}
         <p className='hello'>Hello {user.email}</p>
         <div className='sign-out-container'>
-          <button className='sign-out' onClick={() => {
+          <Link className='sign-out' onClick={() => {
             signOut();
             setUser(null);
           }}>Sign Out</Link>
