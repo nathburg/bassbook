@@ -7,19 +7,22 @@ import NewPost from './Components/NewPost/NewPost';
 import EditPost from './Components/EditPost/EditPost';
 import ChooseTheme from './Components/ChooseTheme/ChooseTheme';
 import Footer from './Components/Footer/Footer';
+import { useContext } from 'react';
+import { UserContext } from './context/UserContext';
 
 function App() {
+  const { isFish } = useContext(UserContext);
   return (
-    <div className="App music-app">
+    <div className={`App ${isFish ? 'fish-app' : 'music-app'}`}>
       <Header />
       <Switch>
-        <Route path='/post/edit/:id' component={EditPost} />
+        <Route path="/post/edit/:id" component={EditPost} />
         <Route path="/auth/:type" component={Auth} />
-        <Route path='/post/new' component={NewPost} />
-        <Route path='/topic' component={ChooseTheme} />
-        <Route path='/' component={Main} />
-        <Route path='*'>
-          <Redirect to='/auth/sign-in' />
+        <Route path="/post/new" component={NewPost} />
+        <Route path="/topic" component={ChooseTheme} />
+        <Route path="/" component={Main} />
+        <Route path="*">
+          <Redirect to="/auth/sign-in" />
         </Route>
       </Switch>
       <Footer className={'footer'} />

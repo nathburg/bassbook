@@ -3,8 +3,13 @@
     display: grid;
 }
 
-.input-form.music {
+.input-form.music,  .input-form.fish{
     border: 1px solid white;
     padding: 40px;
     background-color: black;
+}
+
+.input-form.fish {
+    background-color: white;
+    border: 1px solid black;
 }
