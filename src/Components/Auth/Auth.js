@@ -16,12 +16,12 @@ export default function Auth() {
   getNewUser();
   
   if (user) {
-    return <Redirect to='/' />;
+    return <Redirect to='/topic' />;
   }
   
   return (
     <div>
-      <div className="fish-auth-form">
+      <div className="auth-form music">
         <label>Email</label>
         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
         <label>Password</label>

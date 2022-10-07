@@ -46,3 +46,10 @@ input {
     font-size: 1.35rem;
 }
 
+
+
+.auth-form.music {
+    border: 1px solid white;
+    padding: 40px;
+    background-color: black;
+}

@@ -8,7 +8,7 @@ const UserProvider = ({ children }) => {
   const currentUser = getUser();
   const [user, setUser] = useState(currentUser);
   const [submit, setSubmit] = useState(true);
-  const [isFish, setIsFish] = useState(true);
+  const [isFish, setIsFish] = useState(false);
 
 
   

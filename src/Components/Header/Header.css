@@ -45,8 +45,16 @@ background: linear-gradient(to right, #1E66CE 0%, #87C4C5 100%);
   align-items: flex-end;
   
 }
+.music h1, .music p {
+  color: white;
+}
 
-.fish-h1 {
+.music button {
+  background-color: white;
+  color: black;
+}
+
+h1 {
   color: black;
   font-size: 7rem;
   margin: 0;
