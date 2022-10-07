@@ -2,3 +2,11 @@
     margin: 24px;
     display: grid;
 }
+
+.music {
+    border: 1px solid black;
+}
+
+.music-text {
+    color: aquamarine;
+}

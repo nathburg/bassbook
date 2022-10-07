@@ -18,10 +18,10 @@ export default function NewPost(title, description) {
   };
 
   return (
-    <div className='input-form'>
-      <label>Title</label>
+    <div className="input-form music">
+      <label className="music-text">Title</label>
       <input type="text" onChange={(e) => setTitleInput(e.target.value)} />
-      <label>Description</label>
+      <label className="music-text">Description</label>
       <input type="text" onChange={(e) => setDescriptionInput(e.target.value)} />
       <button
         onClick={() => {
