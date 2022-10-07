@@ -1,6 +1,7 @@
 .input-form {
     margin: 24px;
     display: grid;
+    width: 600px;
 }
 
 .input-form.music,  .input-form.fish{
@@ -12,4 +13,11 @@
 .input-form.fish {
     background-color: white;
     border: 1px solid black;
+}
+
+.edit-post-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45vh;
 }

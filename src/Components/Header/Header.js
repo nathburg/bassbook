@@ -9,12 +9,12 @@ export default function Header() {
   const { user, setUser, isFish } = useContext(UserContext);
   console.log(user);
   return (
-    <div className={`header ${isFish ? 'fish-header' : 'music music-header'}`}>
+    <div className={`header ${isFish ? 'fish' : 'music music-header'}`}>
       <div className="title-container">
         <h1>Welcome to Bassbook {isFish ? '🐟' : '🎸'}</h1>
       </div>
       {user && (
-        <div className="fish-head-container music">
+        <div className="head-container">
           {/* <div className='info-container'> */}
           <p className="hello">Hello {user.email}</p>
           <div className="sign-out-container">
