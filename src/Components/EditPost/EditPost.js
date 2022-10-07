@@ -27,7 +27,7 @@ export default function EditPost() {
   }
 
   return (
-    <div className='input-form'>
+    <div className='input-form music'>
       <label>Title</label>
       <input
         type="text"

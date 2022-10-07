@@ -9,3 +9,9 @@
   font-family: 'Barlow Condensed', sans-serif;
 }
 
+.music-app {
+  background-image: url(../public/bass-guitar2.jpg);
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
