@@ -2,6 +2,8 @@ import { useHistory, useParams } from 'react-router-dom';
 import { updatePost } from '../../services/posts';
 import { usePost } from '../../hooks/usePost';
 
+import './EditPost.css';
+
 export default function EditPost() {
   const { id } = useParams();
   const { postDetail, setPostDetail, loading, error, setError } = usePost(id);
@@ -25,7 +27,7 @@ export default function EditPost() {
   }
 
   return (
-    <div>
+    <div className='input-form'>
       <label>Title</label>
       <input
         type="text"

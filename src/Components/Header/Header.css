@@ -1,5 +1,23 @@
 .sign-out {
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  margin: 30px;
+  color: lightgreen;
+  width: 100px;
+  
+  
+  
+
+}
+
+.sign-out-container {
+  display: flex;
+  align-content: flex-end;
+  flex-direction: row-reverse;
 }
 
 .link-container {
@@ -7,10 +25,3 @@
   flex-direction: column;
 }
 
-.bg-fish {
-  background-color: chartreuse;
-}
-
-.bg-music {
-  background-color: plum 
-}

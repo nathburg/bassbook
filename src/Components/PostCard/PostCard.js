@@ -13,8 +13,8 @@ export default function PostCard({ title, description, user_id, id }) {
       <h3>{title}</h3>
       <p>{description}</p>
       {owner && (
-        <p>
-          <Link to={`/posts/edit/${id}`}>Edit </Link>
+        <div className='buttons'>
+          <button><Link to={`/post/edit/${id}`}>Edit</Link></button>
           <button onClick={async () => {
             await deletePost(id);
             setSubmit(!submit);
@@ -22,8 +22,11 @@ export default function PostCard({ title, description, user_id, id }) {
           }}>
           Delete
           </button>
-        </p>
+        </div>
       )}
     </div>
   );
 }
+
+
+// comment
