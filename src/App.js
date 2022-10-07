@@ -10,7 +10,7 @@ import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App music-app">
       <Header />
       <Switch>
         <Route path='/post/edit/:id' component={EditPost} />
