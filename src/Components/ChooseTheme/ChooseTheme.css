@@ -1,0 +1,10 @@
+.choose-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topic-button {
+  font-size: 25vh;
+  cursor: pointer;
+}
