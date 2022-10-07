@@ -9,7 +9,7 @@ export default function PostCard({ title, description, user_id, id }) {
   const { user, submit, setSubmit } = useContext(UserContext);
   const owner = user.id === user_id;
   return (
-    <div className="post">
+    <div className="fish-post">
       <h3>{title}</h3>
       <p>{description}</p>
       {owner && (

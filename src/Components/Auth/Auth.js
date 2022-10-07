@@ -21,7 +21,7 @@ export default function Auth() {
   
   return (
     <div>
-      <div className="auth-form">
+      <div className="fish-auth-form">
         <label>Email</label>
         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
         <label>Password</label>
