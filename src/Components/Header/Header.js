@@ -7,7 +7,7 @@ import './Header.css';
 
 export default function Header() {
   const { user, setUser, isFish } = useContext(UserContext);
-  console.log(user);
+
   return (
     <div className={`header ${isFish ? 'fish' : 'music music-header'}`}>
       <div className="title-container">
@@ -15,7 +15,6 @@ export default function Header() {
       </div>
       {user && (
         <div className="head-container">
-          {/* <div className='info-container'> */}
           <p className="hello">Hello {user.email}</p>
           <div className="sign-out-container">
             <Link
@@ -34,7 +33,7 @@ export default function Header() {
           </Link>
         </div>
       )}
-      {/* </div> */}
+      
       {!user && (
         <div className="link-container">
           <NavLink to="/auth/sign-in">Sign In</NavLink>
