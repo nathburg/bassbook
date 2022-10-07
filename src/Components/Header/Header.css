@@ -1,40 +1,50 @@
-.header-music {
+.fish-header {
   display: grid;
   grid-template-columns: 80% 20%;
   width: 100vw;
+  background: #1E66CE;
+background: -moz-linear-gradient(left, #1E66CE 0%, #87C4C5 100%);
+background: -webkit-linear-gradient(left, #1E66CE 0%, #87C4C5 100%);
+background: linear-gradient(to right, #1E66CE 0%, #87C4C5 100%);
+  
 }
 
-.title-container {
+.fish-sign-out  {
+  color: black;
+  font-size: 1.35rem;
+  
+}
+
+.fish-create-post {
+  color: black;
+  font-size: 1.35rem;
+  
+}
+
+
+.fish-title-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.head-container {
+.fish-head-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 
 
 
-
-.header-music button {
-  font-size: 1.35rem;
-  background: black;
-  color: white;
-  border: 1px solid black;
-  
-}
-
-.sign-out-container {
+.fish-sign-out-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  
 }
-
 .music h1, .music p {
   color: white;
 }
@@ -52,7 +62,7 @@ h1 {
   font-style: italic;
 }
 
-.hello {
+.fish-hello {
   color: black;
   font-size: 1.75rem;
   margin: 10px;
@@ -60,19 +70,8 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
-.sign-out-container {
-  display: flex;
-  flex-direction: column;
-}
 
-.info-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  align-content: center;
-  margin-bottom: 5%;
-}
+
 
 
 

@@ -1,21 +1,35 @@
 .post {
     border: 2px solid black;
-    width: 10em;
-    height: 10em;
+    width: 15em;
+    height: 15em;
     margin: 20px;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    color: black;
+     color: black;
     background: linear-gradient(225deg, #ffffff, #f9fafa, #f3f6f5, #edf1f0, #e7edeb, #e1e8e7, #dbe4e2, #d5dfdd);
 }
 
+.fish-post {
+    border: 2px solid black;
+    width: 15em;
+    height: 15em;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #CE5816;
+    background: -moz-linear-gradient(left, #CE5816 0%, #C59237 100%);
+    background: -webkit-linear-gradient(left, #CE5816 0%, #C59237 100%);
+    background: linear-gradient(to right, #CE5816 0%, #C59237 100%);
+}  
+
 h3 {
-    font-size: .8em;
+    font-size: 1.8rem;
 }
 
 p {
-    font-size: 0.6em;
+    font-size: 1rem;
 }
 
 a {
@@ -26,5 +40,5 @@ a {
 button {
     margin: 10px;
     cursor: pointer;
-    font-size: 0.3em;
+    font-size: 0.8em;
 }

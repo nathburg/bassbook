@@ -1,7 +1,52 @@
-.auth-form {
+.fish-auth-form {
     margin: 24px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
 }
+
+
+.fish-auth-form button {
+    color: black;
+    background-color: sandybrown;
+    font-size: 1.35rem;
+    margin-top: 10px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+div.link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 7.5px;
+    font-size: 1.35rem;
+    color: black;
+}
+
+html {
+    background: url(../../../public/fishing.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+label {
+    color: black;
+    font-size: 1.35rem;
+    margin: 10px;
+    background-color: sandybrown;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+input {
+    font-size: 1.35rem;
+}
+
+
 
 .auth-form.music {
     border: 1px solid white;

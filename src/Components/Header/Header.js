@@ -9,6 +9,7 @@ export default function Header() {
   const { user, setUser, isFish, setIsFish } = useContext(UserContext);
   console.log(user);
   return (
+
     <div className='header-music music'>
       <div className='title-container'>
         <h1>Welcome to Bassbook {isFish ? '🐟' : '🎸'}</h1>
@@ -21,11 +22,11 @@ export default function Header() {
           <button className='sign-out' onClick={() => {
             signOut();
             setUser(null);
-          }}>Sign Out</button>
+          }}>Sign Out</Link>
         </div>
-        <button>
-          <Link className='create-post' to="/post/new">Create Post</Link>
-        </button>
+        
+        <Link className='fish-create-post' to="/post/new">Create Post</Link>
+        
       </div>
       }
       {/* </div> */}
