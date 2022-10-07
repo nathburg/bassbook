@@ -3,10 +3,13 @@ import { updatePost } from '../../services/posts';
 import { usePost } from '../../hooks/usePost';
 
 import './EditPost.css';
+import { useContext } from 'react';
+import { UserContext } from '../../context/UserContext';
 
 export default function EditPost() {
   const { id } = useParams();
   const { postDetail, setPostDetail, loading, error, setError } = usePost(id);
+  const { isFish } = useContext(UserContext);
   const history = useHistory();
 
   const handleSubmit = async () => {
@@ -27,7 +30,7 @@ export default function EditPost() {
   }
 
   return (
-    <div className='input-form'>
+    <div className={`input-form ${isFish ? 'fish' : 'music'}`}>
       <label>Title</label>
       <input
         type="text"
@@ -40,11 +43,6 @@ export default function EditPost() {
         value={postDetail.description}
         onChange={(e) => setPostDetail({ ...postDetail, description: e.target.value })}
       />
-      <label>Topic</label>
-      <select>
-        <option>Fish</option>
-        <option>Music</option>
-      </select>
       <button onClick={handleSubmit}>Submit</button>
     </div>
   );

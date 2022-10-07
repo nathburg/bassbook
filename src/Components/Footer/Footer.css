@@ -1,0 +1,16 @@
+.fish-footer {
+  background-color: #CE5816;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.music-footer {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}

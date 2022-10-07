@@ -1,3 +1,9 @@
+.header {
+  display: flex;
+  align-items: center;
+  
+}
+
 .fish-header {
   display: grid;
   grid-template-columns: 80% 20%;
@@ -7,6 +13,12 @@ background: -moz-linear-gradient(left, #1E66CE 0%, #87C4C5 100%);
 background: -webkit-linear-gradient(left, #1E66CE 0%, #87C4C5 100%);
 background: linear-gradient(to right, #1E66CE 0%, #87C4C5 100%);
   
+}
+
+.music-header {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  width: 100vw;
 }
 
 .fish-sign-out  {
@@ -34,6 +46,7 @@ background: linear-gradient(to right, #1E66CE 0%, #87C4C5 100%);
   justify-content: center;
   align-items: center;
   margin: 10px;
+  margin-bottom: 20px;
 }
 
 
@@ -45,10 +58,18 @@ background: linear-gradient(to right, #1E66CE 0%, #87C4C5 100%);
   align-items: flex-end;
   
 }
+.music h1, .music p {
+  color: white;
+}
 
-.fish-h1 {
+.music button {
+  background-color: white;
   color: black;
-  font-size: 7rem;
+}
+
+h1 {
+  color: black;
+  font-size: 4rem;
   margin: 0;
   padding: 0;
   font-style: italic;
@@ -60,6 +81,10 @@ background: linear-gradient(to right, #1E66CE 0%, #87C4C5 100%);
   margin: 10px;
   padding: 10px;
   font-family: 'Roboto', sans-serif;
+}
+
+.music a {
+  color: white;
 }
 
 
