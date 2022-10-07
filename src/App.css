@@ -7,5 +7,11 @@
   align-items: center;
   justify-content: space-around;
   font-family: 'Barlow Condensed', sans-serif;
+  height: 100vh;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
 }
 

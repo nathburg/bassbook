@@ -16,7 +16,7 @@ export default function Auth() {
   getNewUser();
   
   if (user) {
-    return <Redirect to='/' />;
+    return <Redirect to='/topic' />;
   }
   
   return (
