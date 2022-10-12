@@ -21,10 +21,12 @@ export default function NewPost(title, description) {
 
   return (
     <div className={`input-form ${isFish ? 'fish' : 'music'}`}>
-      <label className="music-text">Title</label>
-      <input type="text" onChange={(e) => setTitleInput(e.target.value)} />
-      <label className="music-text">Description</label>
-      <input type="text" onChange={(e) => setDescriptionInput(e.target.value)} />
+      <label className="music-text">Title
+        <input type="text" onChange={(e) => setTitleInput(e.target.value)} />
+      </label>
+      <label className="music-text">Description
+        <input type="text" onChange={(e) => setDescriptionInput(e.target.value)} />
+      </label>
       <button
         onClick={() => {
           handleSubmit(titleInput, descriptionInput);
