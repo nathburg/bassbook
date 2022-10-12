@@ -4,7 +4,7 @@ import { UserContext } from '../../context/UserContext';
 import { createPost } from '../../services/posts';
 import './NewPost.css';
 
-export default function NewPost(title, description) {
+export default function NewPost({ title, description }) {
   const [titleInput, setTitleInput] = useState(title);
   const [descriptionInput, setDescriptionInput] = useState(description);
   const { isFish, user } = useContext(UserContext);
@@ -24,7 +24,7 @@ export default function NewPost(title, description) {
   return (
     <div className='create-post-container'>
       <div className={`input-form ${isFish ? 'fish' : 'music'}`}>
-        <label className="music-text">Title</label>
+        <label htmlFor='Title' className="music-text">Title</label>
         <input aria-label='Title' type="text" onChange={(e) => setTitleInput(e.target.value)} />
         <label className="music-text">Description</label>
         <input aria-label='Description' type="text" onChange={(e) => setDescriptionInput(e.target.value)} />

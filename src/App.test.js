@@ -9,7 +9,6 @@ import * as postFns from './services/posts';
 
 
 jest.mock('./services/auth');
-jest.mock('./Components/NewPost/NewPost');
 jest.mock('./services/posts');
 
 
@@ -73,12 +72,12 @@ test('signed in users should see a list of post at /topic', async () => {
 
   render(
     <UserProvider>
-      <MemoryRouter>
+      <MemoryRouter initialEntries={[`/`]}>
         <App />
       </MemoryRouter>
     </UserProvider>
   );
-
+  
   await screen.findByText(/Fake Post #1/i);
   await screen.findAllByText(/Edit/i);
   await screen.findByText(/Fake Post #2/i);
@@ -98,19 +97,21 @@ const NewPost = [
 test('signed in users should be able to create a new post', async () => {
   authFns.getUser.mockReturnValue(mockUser);
   postFns.createPost.mockReturnValue(NewPost);
+  postFns.getPosts.mockReturnValue(fakePost);
 
   render(
     <UserProvider>
-      <MemoryRouter>
+      <MemoryRouter initialEntries={[`/post/new`]}>
         <App />
       </MemoryRouter>
     </UserProvider>
   );
 
-  const newPostLink = screen.getByText('Create Post');
-  fireEvent.click(newPostLink);
-
-  const titleInput = screen.getByLabelText('Title');
+  // const newPostLink = screen.getByText('Create Post');
+  // fireEvent.click(newPostLink);
+  // screen.debug();
+  
+  const titleInput = await screen.findByLabelText('Title');
   fireEvent.change(titleInput, { target: { value: 'New Post' } });
   expect(titleInput.value).toBe('New Post');
 
@@ -118,8 +119,10 @@ test('signed in users should be able to create a new post', async () => {
   fireEvent.change(descriptionInput, { target: { value: 'This is a new post' } });
   expect(descriptionInput.value).toBe('This is a new post');
 
-  const submitButton = screen.getByText('Submit');
+  const submitButton = await screen.findByText('Submit');
   fireEvent.click(submitButton);
+
+  await screen.findByText(/Fake Post #1/i);
 
 
 });
