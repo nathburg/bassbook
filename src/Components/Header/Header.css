@@ -4,7 +4,7 @@
   
 }
 
-.fish-header {
+.header.fish {
   display: grid;
   grid-template-columns: 80% 20%;
   width: 100vw;
@@ -40,13 +40,14 @@ background: linear-gradient(to right, #1E66CE 0%, #87C4C5 100%);
   align-items: center;
 }
 
-.fish-head-container {
+.head-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 10px;
   margin-bottom: 20px;
+  
 }
 
 
