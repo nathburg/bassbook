@@ -25,9 +25,9 @@ export default function NewPost(title, description) {
     <div className='create-post-container'>
       <div className={`input-form ${isFish ? 'fish' : 'music'}`}>
         <label className="music-text">Title</label>
-        <input type="text" onChange={(e) => setTitleInput(e.target.value)} />
+        <input aria-label='Title' type="text" onChange={(e) => setTitleInput(e.target.value)} />
         <label className="music-text">Description</label>
-        <input type="text" onChange={(e) => setDescriptionInput(e.target.value)} />
+        <input aria-label='Description' type="text" onChange={(e) => setDescriptionInput(e.target.value)} />
         <button
           onClick={() => {
             handleSubmit(titleInput, descriptionInput);

@@ -4,9 +4,13 @@ import { MemoryRouter } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
 
 import * as authFns from './services/auth';
+import * as postFns from './services/posts';
+
 
 
 jest.mock('./services/auth');
+jest.mock('./Components/NewPost/NewPost');
+jest.mock('./services/posts');
 
 
 const mockUser = {
@@ -51,10 +55,71 @@ test ('user can sign in', async () => {
 
 
 
-// write test for auth
 
 
+const fakePost = [
+  {
+    id: 1,
+    title: 'Fake Post #1',
+    description: 'This is a fake post',
+    user_id: 1,
+  },
+  { id: 2, title: 'Fake Post #2', description: 'This is a fake post', user_id: 1 },
+];
+
+test('signed in users should see a list of post at /topic', async () => {
+  authFns.getUser.mockReturnValue(mockUser);
+  postFns.getPosts.mockReturnValue(fakePost);
+
+  render(
+    <UserProvider>
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    </UserProvider>
+  );
+
+  await screen.findByText(/Fake Post #1/i);
+  await screen.findAllByText(/Edit/i);
+  await screen.findByText(/Fake Post #2/i);
+});
 
 
+const NewPost = [
+  {
+    id: 1,
+    title: 'New Post #1',
+    description: 'This is a new post',
+    user_id: 1,
+  },
+];
 
 
+test('signed in users should be able to create a new post', async () => {
+  authFns.getUser.mockReturnValue(mockUser);
+  postFns.createPost.mockReturnValue(NewPost);
+
+  render(
+    <UserProvider>
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    </UserProvider>
+  );
+
+  const newPostLink = screen.getByText('Create Post');
+  fireEvent.click(newPostLink);
+
+  const titleInput = screen.getByLabelText('Title');
+  fireEvent.change(titleInput, { target: { value: 'New Post' } });
+  expect(titleInput.value).toBe('New Post');
+
+  const descriptionInput = screen.getByLabelText('Description');
+  fireEvent.change(descriptionInput, { target: { value: 'This is a new post' } });
+  expect(descriptionInput.value).toBe('This is a new post');
+
+  const submitButton = screen.getByText('Submit');
+  fireEvent.click(submitButton);
+
+
+});
