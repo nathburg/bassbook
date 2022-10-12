@@ -1,4 +1,4 @@
-.fish-footer {
+.fish-footer button{
   background-color: #CE5816;
   cursor: pointer;
   position: absolute;
@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.music-footer {
+.music-footer button{
   background-color: white;
   color: black;
   cursor: pointer;

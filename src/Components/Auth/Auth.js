@@ -22,10 +22,10 @@ export default function Auth() {
   return (
     <div className='auth-form-container'>
       <div className={`auth-form ${isFish ? 'fish' : 'music'}`}>
-        <label>Email</label>
-        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <label>Password</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <label htmlFor="email">Email</label>
+        <input type="text" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <label htmlFor="password">Password</label>
+        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <button onClick={async () => {
           await authUser(email, password, type);
           getNewUser();
