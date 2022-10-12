@@ -17,7 +17,7 @@ export default function Header() {
         <div className="head-container">
           <p className="hello">Hello {user.email}</p>
           <div className="sign-out-container">
-            <Link
+            <button
               className="sign-out"
               onClick={() => {
                 signOut();
@@ -25,7 +25,7 @@ export default function Header() {
               }}
             >
               Sign Out
-            </Link>
+            </button>
           </div>
 
           <Link className={`${isFish ? 'fish' : 'music'}`} to="/post/new">
@@ -36,7 +36,7 @@ export default function Header() {
       
       {!user && (
         <div className="link-container">
-          <NavLink to="/auth/sign-in">Sign In</NavLink>
+          <button><NavLink to="/auth/sign-in">Sign In</NavLink></button>
           <NavLink to="/auth/sign-up">Sign Up</NavLink>
         </div>
       )}

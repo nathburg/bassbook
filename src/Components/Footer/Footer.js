@@ -5,8 +5,8 @@ import './Footer.css';
 export default function Footer() {
   const { isFish, setIsFish } = useContext(UserContext);
   return (
-    <div className={`${isFish ? 'fish-footer' : 'music-footer'}`} onClick={() => setIsFish(!isFish)}>
+    <button className={`${isFish ? 'fish-footer' : 'music-footer'}`} onClick={() => setIsFish(!isFish)}>
       Change Theme
-    </div>
+    </button>
   );
 }
