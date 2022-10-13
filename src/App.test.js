@@ -1,4 +1,4 @@
-const { fireEvent, render, screen, findByText, getByText } = require('@testing-library/react');
+const { fireEvent, render, screen } = require('@testing-library/react');
 const { MemoryRouter } = require('react-router-dom');
 import { act } from 'react-dom/test-utils';
 import App from './App';
@@ -87,12 +87,10 @@ test('user can see items on board', async () => {
   await screen.findByText(/Fake Post #1/i);
 });
 
-const fakePost = [{ id: 2, title: 'sick new post', description: 'description for fake post', user_id: '0dab2c65-5911-469c-9f12-8fb47ebe52f2' }];
 
 test('user can add item to board', async () => {
 
   authFns.getUser.mockReturnValue(mockUser);
-  // postFns.createPost.mockReturnValue(fakePost);
   postFns.getPosts.mockReturnValue(fakePosts);
 
   
