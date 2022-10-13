@@ -22,20 +22,21 @@ export default function NewPost(title, description) {
   };
 
   return (
-    <div className='create-post-container'>
-      <div className={`input-form ${isFish ? 'fish' : 'music'}`}>
-        <label className="music-text">Title</label>
+    <div className={`input-form ${isFish ? 'fish' : 'music'}`}>
+      <label className="music-text">Title
         <input type="text" onChange={(e) => setTitleInput(e.target.value)} />
-        <label className="music-text">Description</label>
+      </label>
+      <label className="music-text">Description
         <input type="text" onChange={(e) => setDescriptionInput(e.target.value)} />
-        <button
-          onClick={() => {
-            handleSubmit(titleInput, descriptionInput);
-          }}
-        >
+      </label>
+      <button
+        onClick={() => {
+          handleSubmit(titleInput, descriptionInput);
+        }}
+      >
+
         Submit
-        </button>
-      </div>
+      </button>
     </div>
   );
 }
