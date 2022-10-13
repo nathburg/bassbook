@@ -36,8 +36,7 @@ export default function NewPost(title, description) {
       >
 
         Submit
-        </button>
-      </div>
+      </button>
     </div>
   );
 }
