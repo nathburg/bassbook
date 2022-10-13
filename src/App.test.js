@@ -1,5 +1,6 @@
 const { fireEvent, render, screen, findByText, getByText } = require('@testing-library/react');
 const { MemoryRouter } = require('react-router-dom');
+import { act } from 'react-dom/test-utils';
 import App from './App';
 import { UserProvider } from './context/UserContext';
 
@@ -86,31 +87,38 @@ test('user can see items on board', async () => {
   await screen.findByText(/Fake Post #1/i);
 });
 
-// test('user can add item to board', async () => {
+const fakePost = [{ id: 2, title: 'sick new post', description: 'description for fake post', user_id: '0dab2c65-5911-469c-9f12-8fb47ebe52f2' }];
 
-//   authFns.getUser.mockReturnValue(mockUser);
+test('user can add item to board', async () => {
 
-//   render(
-//     <UserProvider>
-//       <MemoryRouter initialEntries={['/post/new']}>
-//         <App />
-//       </MemoryRouter>
-//     </UserProvider>
-//   );
+  authFns.getUser.mockReturnValue(mockUser);
+  // postFns.createPost.mockReturnValue(fakePost);
+  postFns.getPosts.mockReturnValue(fakePosts);
 
-//   const titleInputEl = screen.getByLabelText('Title');
-//   expect(titleInputEl).toBeInTheDocument();
-//   const descriptionInputEl = screen.getByLabelText('Description');
-//   expect(descriptionInputEl).toBeInTheDocument();
-//   const submitButton = screen.getByRole('button');
-//   expect(submitButton).toBeInTheDocument();
   
-//   fireEvent.change(titleInputEl, { target: { value: 'sick new post' } });
-//   fireEvent.change(descriptionInputEl, { target: { value: 'this is a fake post to trick a robot' } });
-//   fireEvent.click(submitButton);
+  render(
+    <UserProvider>
+      <MemoryRouter initialEntries={['/post/new']}>
+        <App />
+      </MemoryRouter>
+    </UserProvider>
+  );
 
-//   await screen.findByText(/sick new post/i);
-//   // await screen.findByText(/edit/i);
-// });
+  const titleInputEl = screen.getByLabelText('Title');
+  expect(titleInputEl).toBeInTheDocument();
+  const descriptionInputEl = screen.getByLabelText('Description');
+  expect(descriptionInputEl).toBeInTheDocument();
+  const submitButton = screen.getByRole('button');
+  expect(submitButton).toBeInTheDocument();
+  
+  act(() => {
+    fireEvent.change(titleInputEl, { target: { value: 'sick new post' } });
+    fireEvent.change(descriptionInputEl, { target: { value: 'this is a fake post to trick a robot' } });
+    fireEvent.click(submitButton);
+  });
+  
+  await screen.findByText(/Fake Post #1/i);
+
+});
 
 
